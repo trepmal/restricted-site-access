@@ -9,6 +9,10 @@
  License: GPLv2 or later
 */
 
+if ( defined('WP_CLI') && WP_CLI ) {
+	include plugin_dir_path( __FILE__ ) . '/includes/cli.php';
+}
+
 class Restricted_Site_Access {
 
 	private static $rsa_options, $basename;
